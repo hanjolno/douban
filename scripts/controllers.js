@@ -1,0 +1,11 @@
+angular.module("controllers",[])
+.controller("navCon",["$scope",function($scope){
+	$scope.navlist=[
+	{"link":"#/day","class":"icon-home","span":"今日一刻"},
+	{"link":"#/older","class":"icon-file-empty","span":"往期内容"},
+	{"link":"#/author","class":"icon-pencil","span":"热门作者"},
+	{"link":"#/category","class":"icon-menu","span":"栏目浏览"},
+	{"link":"#/favourite","class":"icon-heart","span":"我的喜欢"},
+	{"link":"#/settings","class":"icon-cog","span":"设置"}
+	];
+}])
