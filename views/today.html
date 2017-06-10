@@ -1,4 +1,4 @@
-<div class="mark">{{today|date:"ddMMM"}}</div>
+<div class="mark" ng-show="loaded">{{today|date:"ddMMM"}}</div>
 <ul class="posts large">
     <!-- 文章 -->
     <li ng-repeat="data in datas">

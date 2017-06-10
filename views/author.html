@@ -1,5 +1,5 @@
 <dl class="author">
-	<dt>本周推荐</dt>
+	<dt ng-show="loaded">本周推荐</dt>
 	<dd ng-repeat="great in greats">
 		<div class="avatar">
 			<img src="{{great.avatar}}" alt="" class="author_pic">
@@ -9,7 +9,7 @@
 			<p>{{great.editor_notes}}</p>
 		</div>
 	</dd>
-	<dt>热门作者</dt>
+	<dt ng-show="loaded">热门作者</dt>
 	<dd ng-repeat="all in alls">
 		<div class="avatar" class="author_pic">
 			<img src="{{all.avatar}}" alt="" class="author_pic">

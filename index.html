@@ -40,7 +40,9 @@
 			<div ng-class="{body:true,collapse:collapsed}">
 				<div class="item">
 					<!-- 日期分类 -->
-					<img src="public/images/load.gif" class="loadpic" ng-show="loaded">
+                <!-- <img src="public/images/loading.gif" ng-hide="loaded">                 -->
+                <!-- <div ng-view></div> -->
+					<img src="public/images/load.gif" class="loadpic" ng-hide="loaded">
 					<div ng-view></div>
 				</div>
 			</div>
