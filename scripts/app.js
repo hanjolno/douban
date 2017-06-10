@@ -29,5 +29,8 @@ app.config(["$routeProvider",function($routeProvider){
 	.when("/older",{
 		templateUrl:"./views/older.html",
 		controller:"olderCon"
+	}).when("/author",{
+		templateUrl:"./views/author.html",
+		controller:"authorCon"
 	}).otherwise({redirectTo:"/day"})
 }])

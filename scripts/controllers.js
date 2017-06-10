@@ -35,3 +35,15 @@ angular.module("controllers",[])
 	})
 	$rootScope.title="往期内容";
 }])
+.controller("authorCon",["$scope","$http","$rootScope",function($scope,$http,$rootScope){
+	$rootScope.loaded=true;
+	$http({
+		url:"./api/author.php"
+	}).then(function(data){
+		$scope.greats=data.data[0].authors;
+		$scope.alls=data.data[1].authors;
+		// console.log($scope.greats);
+		$rootScope.loaded=false;
+	})
+	$rootScope.title="热门作者";
+}])
