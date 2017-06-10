@@ -1,9 +1,9 @@
-var app=angular.module("app",["controllers"]);
+var app=angular.module("app",["controllers","ngRoute"]);
 app.run(["$rootScope",function($rootScope){
 	$rootScope.collapsed=false;
 	$rootScope.toggle=function(){
 		var dds = document.querySelectorAll(".navs dd");
-		console.log(dds);
+		// console.log(dds);
 		$rootScope.collapsed=!$rootScope.collapsed;
 		if($rootScope.collapsed){
 			for(var i=0;i<dds.length;i++){
@@ -17,4 +17,17 @@ app.run(["$rootScope",function($rootScope){
 			}
 		}
 	}
+}])
+app.config(function($locationProvider){
+	$locationProvider.hashPrefix("");
+})
+app.config(["$routeProvider",function($routeProvider){
+	$routeProvider.when("/day",{
+		templateUrl:"./views/today.html",
+		controller:"todayCon"
+	})
+	.when("/older",{
+		templateUrl:"./views/older.html",
+		controller:"olderCon"
+	}).otherwise({redirectTo:"/day"})
 }])
